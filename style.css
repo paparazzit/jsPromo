@@ -1,0 +1,182 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;700&display=swap");
+:root {
+  --fontFamily: "Poppins", sans-serif;
+  --fontSize: 16px;
+  --tamnoPlava: #003568;
+  --svetloPlava: #92e0f9;
+  --tamnoSiva: #20333b;
+  --tamnoCrvena: #ff5a57;
+  --svetloCrvena: #ff9b9a;
+  --svetloSiva: #def2fa;
+  --bela: #fff;
+  --transition: 0.4s ease;
+  --padding: 60px 0;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: var(--fontFamily);
+  font-size: var(--fontSize);
+  color: var(--tamnoSiva);
+  font-weight: 300;
+}
+a {
+  text-decoration: none;
+}
+a:hover {
+  transition: var(--transition);
+}
+.container {
+  max-width: 1140px;
+  margin: 0 auto;
+}
+button {
+  padding: 15px 30px;
+  border: 2px solid var(--bela);
+  background: transparent;
+  cursor: pointer;
+  text-transform: uppercase;
+  margin-top: 20px;
+  color: var(--bela);
+  box-shadow: 0 0 2px var(--tamnoSiva);
+}
+button:hover {
+  transition: var(--transition);
+  background: var(--bela);
+  color: var(--tamnoSiva);
+}
+h2 {
+  font-size: 3rem;
+  color: var(--tamnoPlava);
+}
+h2::after {
+  content: "";
+  display: block;
+  width: 100px;
+  height: 5px;
+  background: var(--tamnoPlava);
+  margin: 10px 0 30px 0;
+}
+/* Navigacija */
+nav {
+  background: var(--svetloSiva);
+  padding: 5px 0;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 100;
+}
+nav .container {
+  display: flex;
+  justify-content: space-between;
+}
+nav ul {
+  display: flex;
+  list-style: none;
+  align-items: center;
+}
+nav ul li {
+  margin: 0 30px;
+}
+nav ul li a {
+  font-size: 20px;
+  color: var(--tamnoSiva);
+}
+nav ul li a:hover {
+  color: var(--tamnoCrvena);
+}
+.logo {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--tamnoCrvena);
+}
+.logo:hover {
+  color: var(--tamnoSiva);
+}
+/* header */
+.mainHeader {
+  padding: 150px 0 200px 0;
+  background: linear-gradient(45deg, var(--tamnoCrvena), var(--svetloPlava));
+  clip-path: polygon(0 1%, 100% 1%, 100% 85%, 0% 100%);
+}
+.mainHeader .container {
+  display: flex;
+}
+.mainHeader img {
+  width: 100%;
+}
+.mainHeader .container article:first-child {
+  flex: 0 0 60%;
+}
+.maniHeader .container article:last-child {
+  flex: 0 0 40%;
+}
+
+/* tipkajuci naslov */
+.tipkajuciNaslov {
+  color: var(--bela);
+  text-shadow: 0 0 1px var(--tamnoSiva);
+  font-size: 45px;
+  letter-spacing: 3px;
+  font-weight: 700;
+  position: relative;
+  text-transform: uppercase;
+}
+.tipkajuciNaslov::after {
+  content: "";
+  width: 5px;
+  height: 45px;
+  background: var(--bela);
+  position: absolute;
+  animation: blinkanje 0.9s 3s infinite;
+  top: 10px;
+}
+@keyframes blinkanje {
+  0% {
+    background: var(--bela);
+  }
+  50% {
+    background: transparent;
+  }
+  100% {
+    background: var(--bela);
+  }
+}
+.mainHeader p {
+  font-size: 1.2rem;
+  color: var(--bela);
+  text-shadow: 0 0 2px var(--tamnoSiva);
+}
+
+/* o nama */
+#onama {
+  padding: var(--padding);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+#onama img {
+  width: 100%;
+}
+
+#onama article:first-child {
+  flex: 0 0 55%;
+}
+#onama article:last-child {
+  flex: 0 0 35%;
+}
+#onama button {
+  border: 2px solid var(--tamnoSiva);
+  background: transparent;
+
+  color: var(--tamnoSiva);
+}
+#onama button:hover {
+  transition: var(--transition);
+  background: var(--bela);
+  color: var(--tamnoSiva);
+}
